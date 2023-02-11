@@ -19,7 +19,8 @@ $(document).ready(function() {
 		const seconds = Math.floor(time/1000);
 		const minutes = Math.floor(seconds/60);
 		const hours = Math.floor(minutes/60);
-		var timeStr = hours + ":" + String(minutes%60).padStart(2, '0') + ":" + String(seconds%60).padStart(2, '0');
+		const days = Math.floor(hours/24);
+		var timeStr = String(days).padStart(2, '0') + ":" + String(hours%24).padStart(2, '0') + ":" + String(minutes%60).padStart(2, '0') + ":" + String(seconds%60).padStart(2, '0');
 		timeStr = timeStr.split('').map(c => {
 			const span = `<span>${c}</span>`;
 			return span;
