@@ -1,0 +1,88 @@
+body {
+	margin: 0px;
+}
+
+h1 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+h2 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+h3 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+h4 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+h5 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+h6 {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	font-weight: 500;
+	text-align: center;
+}
+.main-font {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	text-align: center;
+}
+
+.background-element {
+	position: absolute;
+}
+
+#background {
+	z-index: -1;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-image: linear-gradient(#158dc1, #923be6);
+	overflow:hidden
+}
+
+#cover-page {
+	padding-top: 16vh;
+	text-align: center;
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+}
+
+.big-button {
+	white-space: normal;
+	background-color: #ff65e0;
+	border: none;
+	line-height: 0;
+	border-radius: 2em;
+	padding: 1.4em 2em;
+}
+.big-button:hover {
+	background-color: #eb4dcb;
+	cursor: pointer;
+}
