@@ -94,7 +94,7 @@ h6 {
 
 #countdown {
 	margin: 8px auto;
-	font-size: max(4vw,2em);
+	font-size: min(100vw,2em);
 	opacity: 0;
 }
 #countdown span {
