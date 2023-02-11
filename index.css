@@ -91,3 +91,14 @@ h6 {
 	background-color: #eb4dcb;
 	cursor: pointer;
 }
+
+#countdown {
+	margin: 8px auto;
+	font-size: max(4vw,2em);
+	opacity: 0;
+}
+#countdown span {
+  display: inline-block;
+  width: 0.7em;
+  text-align: center;
+}
