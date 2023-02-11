@@ -1,11 +1,7 @@
 var countdownDate = new Date("Apr 15, 2023 09:00:00").getTime();
 
 $(document).ready(function() {
-	var height = $(window).height();
-	var width = $(window).width();
-	var t = Math.max(Math.min(($(window).width() - $(window).height() + 50)/250,1),0);
-	$("#img_fallenstar").css("top", (55-t*25)+"vh");
-	$("#img_library").css("top", (5+t*20)+"vh");
+	onResize();	
 	
 	$("#img_fallenstar").animate({left: "-65px"}, 1000);
 	$("#img_library").animate({right: "-50px"}, 1000);
@@ -28,10 +24,16 @@ $(document).ready(function() {
 		$("#countdown").html(timeStr);
 	}
 })
-$(window).resize(function() {
+$(window).resize(onResize);
+
+function onResize() {
 	var height = $(window).height();
 	var width = $(window).width();
 	var t = Math.max(Math.min(($(window).width() - $(window).height() + 50)/250,1),0);
 	$("#img_fallenstar").css("top", (55-t*25)+"vh");
 	$("#img_library").css("top", (5+t*20)+"vh");
-});
+	
+	var h = $("#cover-page").outerHeight();
+	if(h !== undefined)
+		$("#background").css("height", "max(100vh," + (h*1.1) + "px)");
+}
