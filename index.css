@@ -73,37 +73,15 @@ h1, h2, h3, h4, h5, h6, p {
 
 #faq-page {
 	padding: 0px 0px 4em 0px;
+	min-width: 300px;
 }
-
-
 
 dropdown-box {
-	margin: auto;
-	width: fit-content;
-}
-dropdown-box h3 {
-	margin: inherit;
-	width: inherit;
-	padding: 0.5em 2em;
-	cursor: pointer;
-}
-.dropdown-hidden {
-	margin: inherit;
+	display: block;
+	min-height: 4em;
+	padding: 0px 0px 2em 0px;
 	width: 65%;
-	overflow: clip;
-}
-.dropdown-hidden hr {
-	height: 2px;
-	background: white;
-	margin: 0px;
-	opacity: 0;
-}
-.dropdown-hidden p {
-	margin: inherit;
-	width: 90%;
-	font-size: 0.75em;
-	text-align: left;
-	height: 0px;
-	margin: 0em 1em;
-	overflow: clip;
+	min-width: 300px;
+	margin: auto;
+	font-size: max(10px,min(1em,3vw));
 }
