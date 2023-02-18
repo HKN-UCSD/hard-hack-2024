@@ -33,8 +33,4 @@ function onResize() {
 	const maxHeight = Math.max(Math.min((900 - width)/200,1),0)*430;
 	$("#img_fallenstar").css("top", "max(" + (55-t*25)+"vh," + maxHeight + "px)");
 	$("#img_library").css("top", "max(" + (5+t*20)+"vh,30px)");
-	
-	const h = $("#cover-page").outerHeight();
-	if(h !== undefined)
-		$("#background").css("height", "max(100vh," + (h*1.1) + "px)");
 }
