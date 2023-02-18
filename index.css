@@ -8,7 +8,6 @@ body {
 	min-height: max(300px,100%);
 	min-width: 300px;
 	background-image: linear-gradient(#158dc1, #923be6);
-	overflow: clip;
 }
 
 h1 {
@@ -69,7 +68,8 @@ h6 {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	overflow: visible;
+	overflow-x: clip;
+	overflow-y: visible;
 }
 
 #cover-page {
