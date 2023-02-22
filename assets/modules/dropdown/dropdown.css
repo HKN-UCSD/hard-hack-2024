@@ -30,7 +30,7 @@ h3, p {
 }
 .header svg {
 	vertical-align: bottom;
-	transform: rotate(-90deg);
+	transform: rotate(0deg);
 	flex: 0 0 auto;
 	margin: auto;
 }

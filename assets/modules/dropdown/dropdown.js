@@ -12,9 +12,9 @@ $(document).ready(function() {
 				hiddenText.css("height", "0px");
 				hlines.animate({opacity: 1}, 100);
 				hiddenText.animate({height: autoHeight, margin: "1em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
-				svg.animate({deg: "90"}, {
+				svg.animate({deg: "-180"}, {
 						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + (val-90) + "deg)"});
+							$(this).css({transform: "rotate(" + val + "deg)"});
 						}
 					}
 				);
@@ -25,7 +25,7 @@ $(document).ready(function() {
 				hiddenText.animate({height: 0, margin: "0px 1em"}, 500);
 				svg.animate({deg: "0"}, {
 						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + (val-90) + "deg)"});
+							$(this).css({transform: "rotate(" + val + "deg)"});
 						}
 					}
 				);
