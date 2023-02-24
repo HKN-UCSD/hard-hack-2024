@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	onResize();
 	$("dropdown-box").each(function(ind, elem) {
 		root = elem.shadowRoot;
 		$(".dropdown .header", root).click(function() {
@@ -14,7 +15,7 @@ $(document).ready(function() {
 				hiddenText.animate({height: autoHeight, margin: "1em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
 				svg.animate({deg: "-180"}, {
 						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + val + "deg)"});
+							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 						}
 					}
 				);
@@ -25,7 +26,7 @@ $(document).ready(function() {
 				hiddenText.animate({height: 0, margin: "0px 1em"}, 500);
 				svg.animate({deg: "0"}, {
 						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + val + "deg)"});
+							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 						}
 					}
 				);
@@ -33,6 +34,19 @@ $(document).ready(function() {
 		});
 	});
 });
+
+$(window).resize(onResize);
+
+function onResize() {
+	$("dropdown-box").each(function(ind, elem) {
+		const svg = $("svg", elem.shadowRoot);
+		const hiddenText = $(".dropdown", elem.shadowRoot).find(".dropdown-hidden p");
+		if(hiddenText.height() == 0)
+			svg.css({transform: "rotate(0deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+		else
+			svg.css({transform: "rotate(-180deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+	});
+}
 
 function updateDropdown(elem) {
 	const header = elem.getAttribute("header");
