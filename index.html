@@ -25,17 +25,27 @@
 		<div id="background">
 			<img class="background-element" src="./assets/images/hard_hack_small_logo.png"
 				style="width:5%; min-width:50px; top: max(3vh,20px); left: max(3vh,20px);" />
-			<img id="img_fallenstar" class="background-element" src="./assets/images/hard_hack_fallenstar(2023).png"
-				style="width:35%; min-width: min(60vh,60vw); top: 30vh; left: min(max(-65vh,-65vw),-40%)" />
-			<img id="img_library" class="background-element" src="./assets/images/hard_hack_library2(2023).png"
-				style="width:30%; min-width: min(45vh,45vw); top: 25vh; right: min(max(-50vh,-50vw),-35%)" />
 		</div>
 		<div id="cover-page">
-			<img class="center" src="./assets/images/hard_hack_logo(2023).png"
-				style="width:min(100vw, 260px); display:block;" />
-			<h3 style="font-size: min(100vw,1em); margin: 8px 0px;">San Diego’s largest<br/>hardware focused hackathon</h3>
-			<h3 id="eventdate">April 15 - 16</h3>
-			<a href="https://forms.gle/wDBsqZvTqUorAfCg7"><button class="big-button center main-font" style="font-weight:700; font-size: 1em;">Apply Now</button></a>
+			<div id="cover-flex">
+				<div class="flexpad" style="min-width: 150px; position: relative;">
+					<div id="img_fallenstar_container" style="width: 130%; height: 140%; position: absolute; left: -10%; display: flex; justify-content: flex-end;">
+						<img id="img_fallenstar" src="./assets/images/hard_hack_fallenstar(2023).png"
+						style="position: absolute; height: 70%; top: 10%; display: block;" />
+					</div>
+				</div>
+				<div>
+					<img class="center" src="./assets/images/hard_hack_logo(2023).png"
+					style="width: max(200px,min(50vw,360px)); display:block;" />
+					<p style="font-size: max(12px,min(2.5vw, min(3vw,1.25em))); margin: 8px auto; width: min(50vw,480px);">San Diego’s largest<br/>hardware focused hackathon</p>
+					<h3 id="eventdate" style="font-size: max(20px, 2vw);">April 15 - 16</h3>
+				</div>
+				<div class="flexpad" style="min-width: 24px; position: relative;">
+					<img id="img_fallenstar" src="./assets/images/hard_hack_library2(2023).png"
+					style="position: absolute; height: 280px; width: 80%; min-width: 380px; object-fit: contain; object-position: right; top: 30%; left: 80px;" />
+				</div>
+			</div>
+			<a href="https://forms.gle/wDBsqZvTqUorAfCg7"><button class="big-button center main-font" style="font-weight:700; font-size: max(16px,min(5vw,1.5em));">Apply Now</button></a>
 		</div>
 		<div id="faq-page">
 			<h1 style="font-size: 2.5em; font-weight: 700;">FAQ</h1>
