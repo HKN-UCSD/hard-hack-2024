@@ -51,6 +51,30 @@ h1, h2, h3, h4, h5, h6, p {
 	height: 100%;
 	min-height: 400px;
 }
+#img_fallenstar_container {
+	width: 130%;
+	height: 140%;
+	position: absolute;
+	left: -10%;
+	display: flex;
+	justify-content: flex-end;
+}
+#img_fallenstar {
+	position: absolute;
+	height: 70%;
+	top: 10%;
+	display: block;
+}
+#img_library {
+	position: absolute;
+	height: 280px;
+	width: 80%;
+	min-width: 380px;
+	object-fit: contain;
+	object-position: right;
+	top: 30%;
+	left: 80px;
+}
 
 .flexpad {
 	flex: 1 1 auto;
