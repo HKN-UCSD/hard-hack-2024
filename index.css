@@ -61,9 +61,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #img_fallenstar {
 	position: absolute;
-	height: 70%;
-	top: 10%;
+	height: 100%;
+	top: 0%;
+	left: -100%;
 	display: block;
+	--progress: 0;
 }
 #img_library {
 	position: absolute;
@@ -73,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p {
 	object-fit: contain;
 	object-position: right;
 	top: 30%;
-	left: 80px;
+	left: 150%;
 }
 
 .flexpad {
