@@ -12,6 +12,8 @@ $(document).ready(function() {
 			const container = $("#img_fallenstar_container");
 			const fallenstar = $("#img_fallenstar");
 			
+			$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
+			
 			fallenstar.css({height: (100-30*t) + "%", top: (12*t) + "%"});
 			fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
 		}
