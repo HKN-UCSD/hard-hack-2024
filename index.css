@@ -60,15 +60,10 @@ h1, h2, h3, h4, h5, h6, p {
 	cursor: pointer;
 }
 
-#countdown {
+#eventdate {
 	margin: 8px auto;
-	font-size: min(100vw,2em);
-	opacity: 0;
-}
-#countdown span {
-	display: inline-block;
-	width: 0.7em;
-	text-align: center;
+	padding: 0.9em 0px;
+	font-size: min(100vw,1.8em);
 }
 
 #faq-page {
