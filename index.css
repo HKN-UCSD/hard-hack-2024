@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: absolute;
 	height: 100%;
 	top: 0%;
-	left: -100%;
+	left: -400%;
 	display: block;
 	--progress: 0;
 }
