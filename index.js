@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//onResize();	
+	onResize();	
 	
 	$("#img_fallenstar").animate({"--progress": "1"}, {
 		duration: 1000, step: function(val) {
