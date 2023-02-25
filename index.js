@@ -6,11 +6,9 @@ $(document).ready(function() {
 	
 	$(".hamburger-icon").click(function() {
 		const icon = $(this);
-		setTimeout(function(){
-			icon.toggleClass("hamburger-change");
-		},150)
+		icon.toggleClass("hamburger-change");
 		const items = $("#dropdown-menu-bar-items");
-		const h = items.height() > 0 ? 0 : items.children().first().height();
+		const h = icon.hasClass("hamburger-change") ? items.children().first().height() : 0;
 		items.animate({height: h + "px"}, 300);
 	});
 })
