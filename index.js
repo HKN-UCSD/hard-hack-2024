@@ -22,6 +22,14 @@ $(document).ready(function() {
 	$("#img_library").animate({left: Math.max(80,parseInt($("#img_library").css("left"))*7/30)+"px"}, 800, "swing", function() {
 		$(this).css({left: "max(80px,35%)"});
 	});
+	
+	$(".hamburger-icon").click(function() {
+		const icon = $(this);
+		icon.toggleClass("hamburger-change");
+		const items = $("#dropdown-menu-bar-items");
+		const h = icon.hasClass("hamburger-change") ? items.children().first().height() : 0;
+		items.animate({height: h + "px"}, 300);
+	});
 });
 $(window).resize(onResize);
 
@@ -37,4 +45,17 @@ function onResize() {
 	
 	fallenstar.css({height: (100-30*t) + "%", top: (12*t) + "%"});
 	fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
+	
+	if(width<560)
+	{
+		$("#menu-bar").css({display: "none"});
+		$("#dropdown-menu-bar").css({display: "block"});
+		$("#icon").css({display: "none"});
+	}
+	else
+	{
+		$("#menu-bar").css({display: "block"});
+		$("#dropdown-menu-bar").css({display: "none"});
+		$("#icon").css({display: "block"});
+	}
 }
