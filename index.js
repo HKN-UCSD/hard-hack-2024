@@ -26,7 +26,6 @@ $(document).ready(function() {
 $(window).resize(onResize);
 
 function onResize() {
-	console.log("awgaw");
 	const height = $(window).height();
 	const width = $(window).width();
 	const t = Math.max(Math.min((height - width + 250)/250,1),0);
