@@ -3,6 +3,10 @@
 	src: url("./assets/fonts/LexendPeta-VariableFont_wght.ttf")
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0px;
 	min-height: max(300px,100%);
@@ -32,6 +36,9 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 1em 0px;
 	display: visible;
 }
+#menu-bar a {
+	text-decoration: none;
+}
 #menu-bar span {
 	color: #ffffff;
 	font-family: "Lexend Peta";
@@ -49,6 +56,9 @@ h1, h2, h3, h4, h5, h6, p {
 	position: absolute;
 	display: none;
 	width: 100%;
+}
+#dropdown-menu-bar a {
+	text-decoration: none;
 }
 .hamburger-icon {
 	height: 36px;
