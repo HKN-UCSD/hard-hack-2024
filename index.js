@@ -1,5 +1,16 @@
 $(document).ready(function() {
-	onResize();	
+	if($(window).width()<560)
+	{
+		$("#menu-bar").css({display: "none"});
+		$("#dropdown-menu-bar").css({display: "block"});
+		$("#icon").css({display: "none"});
+	}
+	else
+	{
+		$("#menu-bar").css({display: "block"});
+		$("#dropdown-menu-bar").css({display: "none"});
+		$("#icon").css({display: "block"});
+	}
 	
 	$("#img_fallenstar").animate({"--progress": "1"}, {
 		duration: 1000, step: function(val) {
