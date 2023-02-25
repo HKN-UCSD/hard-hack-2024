@@ -5,61 +5,22 @@
 
 body {
 	margin: 0px;
-	min-height: 300px;
+	min-height: max(300px,100%);
 	min-width: 300px;
+	background-image: linear-gradient(#158dc1, #923be6);
 }
 
-h1 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}
-h2 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}	
-h3 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}
-h4 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}
-h5 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}
-h6 {
-	color: #ffffff;
-	font-family: "Lexend Peta";
-	font-style: normal;
-	font-weight: 500;
-	text-align: center;
-}
-.main-font {
+h1, h2, h3, h4, h5, h6, p {
 	color: #ffffff;
 	font-family: "Lexend Peta";
 	font-style: normal;
 	text-align: center;
 }
-
-.background-element {
-	position: absolute;
+.main-font, .dropdown-hidden {
+	color: #ffffff;
+	font-family: "Lexend Peta";
+	font-style: normal;
+	text-align: center;
 }
 
 #menu-bar {
@@ -131,18 +92,63 @@ h6 {
   transition: 0.5s;
 }
 
+.background-element {
+	position: absolute;
+}
+
 #background {
 	z-index: -1;
 	position: absolute;
-	height: 100vh;
-	width: 100vw;
-	background-image: linear-gradient(#158dc1, #923be6);
-	overflow:hidden
+	height: 100%;
+	width: 100%;
+	overflow-x: clip;
+	overflow-y: visible;
 }
 
 #cover-page {
 	padding-top: 15vh;
 	text-align: center;
+	min-height: max(85vh,650px);
+	max-height: 100vh;
+	
+	overflow-x: clip;
+	overflow-y: visible;
+}
+#cover-flex {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	min-height: 400px;
+}
+#img_fallenstar_container {
+	width: 130%;
+	height: 140%;
+	position: absolute;
+	left: -10%;
+	display: flex;
+	justify-content: flex-end;
+}
+#img_fallenstar {
+	position: absolute;
+	height: 100%;
+	top: 0%;
+	left: -400%;
+	display: block;
+	--progress: 0;
+}
+#img_library {
+	position: absolute;
+	height: 280px;
+	width: 80%;
+	min-width: 380px;
+	object-fit: contain;
+	object-position: right;
+	top: 30%;
+	left: 150%;
+}
+
+.flexpad {
+	flex: 1 1 auto;
 }
 
 .center {
@@ -166,5 +172,20 @@ h6 {
 #eventdate {
 	margin: 8px auto;
 	padding: 0.9em 0px;
-	font-size: min(100vw,1.8em);
+	font-size: min(4vw, 2em);
+}
+
+#faq-page {
+	padding: 0px 0px 4em 0px;
+	min-width: 300px;
+}
+
+dropdown-box {
+	display: block;
+	min-height: 4em;
+	padding: 0px 0px 2em 0px;
+	width: 65%;
+	min-width: 300px;
+	margin: auto;
+	font-size: max(10px,min(1em,3vw));
 }
