@@ -40,6 +40,7 @@ h3, p {
 	overflow: clip;
 }
 .dropdown-hidden hr {
+	border: solid 1px white;
 	height: 2px;
 	background: white;
 	margin: 0px;
@@ -51,6 +52,6 @@ h3, p {
 	font-size: 0.75em;
 	text-align: left;
 	height: 0px;
-	margin: 0em 1em;
+	margin: 0px 1em;
 	overflow: clip;
 }

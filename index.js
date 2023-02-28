@@ -25,13 +25,13 @@ $(document).ready(function() {
 			
 			$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
 			
-			fallenstar.css({height: (100-30*t) + "%", top: (12*t) + "%"});
+			fallenstar.css({height: (80-30*t) + "%", top: (12*t) + "%"});
 			fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
 		}
 	});
 	
-	$("#img_library").animate({left: Math.max(80,parseInt($("#img_library").css("left"))*7/30)+"px"}, 800, "swing", function() {
-		$(this).css({left: "max(80px,35%)"});
+	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 800, "swing", function() {
+		$(this).css({left: "max(96px,35%)"});
 	});
 	
 	$(".hamburger-icon").click(function() {

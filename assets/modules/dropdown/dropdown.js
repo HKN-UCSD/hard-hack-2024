@@ -12,7 +12,7 @@ $(document).ready(function() {
 				const autoHeight = hiddenText.height();
 				hiddenText.css("height", "0px");
 				hlines.animate({opacity: 1}, 100);
-				hiddenText.animate({height: autoHeight, margin: "1em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
+				hiddenText.animate({height: autoHeight, margin: "2em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
 				svg.animate({deg: "-180"}, {
 						duration: 500, step: function(val) {
 							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
