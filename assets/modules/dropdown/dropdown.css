@@ -1,13 +1,9 @@
-@font-face {
-	font-family: "Lexend Peta";
-	src: url("./assets/fonts/LexendPeta-VariableFont_wght.ttf")
-}
-
 h3, p {
 	color: #ffffff;
-	font-family: "Lexend Peta";
+	font-family: "Poppins";
 	font-style: normal;
-	text-align: center;
+	font-weight: 500;
+	font-size: 18px;
 }
 
 .header {
@@ -28,6 +24,8 @@ h3, p {
 	padding-right: 1em;
 	text-align: left;
 	flex: 1 1 auto;
+	font-weight: 700;
+	font-size: 30px;
 }
 .header svg {
 	vertical-align: bottom;

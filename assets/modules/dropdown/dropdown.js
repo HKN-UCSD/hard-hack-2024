@@ -70,9 +70,13 @@ class DropdownBox extends HTMLElement {
 		super();
 		this.attachShadow({ mode: 'open' });
 		
-		const stylesheet = document.createElement("link");
+		var stylesheet = document.createElement("link");
 		stylesheet.setAttribute("rel", "stylesheet");
 		stylesheet.setAttribute("href", "./assets/modules/dropdown/dropdown.css");
+		this.shadowRoot.appendChild(stylesheet);
+		stylesheet = document.createElement("link");
+		stylesheet.setAttribute("rel", "stylesheet");
+		stylesheet.setAttribute("href", "./fonts.css");
 		this.shadowRoot.appendChild(stylesheet);
 	}
 	
