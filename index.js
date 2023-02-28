@@ -19,13 +19,14 @@ $(document).ready(function() {
 			const height = $(window).height();
 			const width = $(window).width();
 			const t = Math.max(Math.min((height - width + 250)/250,1),0);
+			const s = Math.max(Math.min((height - width)/100,1),0);
 			
 			const container = $("#img_fallenstar_container");
 			const fallenstar = $("#img_fallenstar");
 			
 			$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
 			
-			fallenstar.css({height: (80-30*t) + "%", top: (12*t) + "%"});
+			fallenstar.css({height: (80-10*t) + "%", top: (8*t-s*8+10) + "%"});
 			fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
 		}
 	});
@@ -41,6 +42,8 @@ $(document).ready(function() {
 		const h = icon.hasClass("hamburger-change") ? items.children().first().height() : 0;
 		items.animate({height: h + "px"}, 300);
 	});
+	
+	onResize();
 });
 $(window).resize(onResize);
 
@@ -48,13 +51,14 @@ function onResize() {
 	const height = $(window).height();
 	const width = $(window).width();
 	const t = Math.max(Math.min((height - width + 250)/250,1),0);
+	const s = Math.max(Math.min((height - width)/100,1),0);
 	
 	const container = $("#img_fallenstar_container");
 	const fallenstar = $("#img_fallenstar");
 	
 	$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
-	
-	fallenstar.css({height: (100-30*t) + "%", top: (12*t) + "%"});
+			
+	fallenstar.css({height: (80-10*t) + "%", top: (8*t-s*8+10) + "%"});
 	fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
 	
 	if(width<560)
