@@ -30,7 +30,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 800, "swing", function() {
+	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 900, "swing", function() {
 		$(this).css({left: "max(96px,35%)"});
 	});
 	
