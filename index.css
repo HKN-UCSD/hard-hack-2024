@@ -1,8 +1,10 @@
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body {
+	overflow-x: hidden;
 	margin: 0px;
 	min-height: max(300px,100%);
 	min-width: 300px;

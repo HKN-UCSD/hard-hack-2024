@@ -34,6 +34,7 @@ h3, p {
 	margin: auto;
 }
 .dropdown-hidden {
+	position: relative;
 	margin: inherit;
 	overflow: clip;
 }
@@ -45,6 +46,7 @@ h3, p {
 	opacity: 0;
 }
 .dropdown-hidden p {
+	position: relative;
 	margin: inherit;
 	width: 80%;
 	font-size: 0.75em;
