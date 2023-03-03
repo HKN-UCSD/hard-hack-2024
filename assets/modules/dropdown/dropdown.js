@@ -6,7 +6,7 @@ $(document).ready(function() {
 			const hiddenText = $(this).parent().find(".dropdown-hidden p");
 			const hlines = $(this).parent().find(".dropdown-hidden hr");
 			const svg = $(this).find("svg");
-			if(hiddenText.height() == 0)
+			if(hiddenText.height() < 10)
 			{
 				hiddenText.css("height", "auto");
 				const autoHeight = hiddenText.height();
@@ -41,7 +41,7 @@ function onResize() {
 	$("dropdown-box").each(function(ind, elem) {
 		const svg = $("svg", elem.shadowRoot);
 		const hiddenText = $(".dropdown", elem.shadowRoot).find(".dropdown-hidden p");
-		if(hiddenText.height() == 0)
+		if(hiddenText.height() < 10)
 			svg.css({transform: "rotate(0deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 		else
 			svg.css({transform: "rotate(-180deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
