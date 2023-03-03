@@ -25,6 +25,7 @@ $(document).ready(function() {
 			const fallenstar = $("#img_fallenstar");
 			
 			$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
+			$("#apply-link").css("margin-top", (Math.max(-200,Math.min(0,height-650)/1.4)-36*t) + "px");
 			
 			fallenstar.css({height: (80-10*t) + "%", top: (8*t-s*8+10) + "%"});
 			fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
@@ -57,6 +58,7 @@ function onResize() {
 	const fallenstar = $("#img_fallenstar");
 	
 	$("#cover-flex").css({"padding-bottom": (48*(1+t)) + "px"});
+	$("#apply-link").css("margin-top", (Math.max(-200,Math.min(0,height-650)/1.4)-36*t) + "px");
 			
 	fallenstar.css({height: (80-10*t) + "%", top: (8*t-s*8+10) + "%"});
 	fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");

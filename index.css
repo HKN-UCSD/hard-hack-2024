@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #cover-page {
-	padding-top: 15vh;
+	padding-top: max(48px,15vh);
 	text-align: center;
 	min-height: max(85vh,650px);
 	max-height: 100vh;
@@ -177,9 +177,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #eventdate {
-	margin: 8px auto;
-	padding: 0.9em 0px;
+	margin: min(8px,1vh) auto;
+	padding: min(0.9em,1vh) 0px;
 	font-size: min(4vw, 2em);
+}
+
+#apply-link {
+	z-index: 2;
 }
 
 #faq-page {
