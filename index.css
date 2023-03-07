@@ -200,3 +200,34 @@ dropdown-box {
 	margin: auto;
 	font-size: max(10px,min(1em,3vw));
 }
+#socials {
+	padding: 20px 0px 0px 0px;
+}
+.facebook {
+	width: 75px;
+	height: 75px;
+	margin-left: 445px;
+	margin-right: 82px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.discord {
+	width: 85px;
+	height: 85px;
+	margin-right: 62px;
+	margin-top: 58px;
+	margin-bottom: 100px;
+}
+.instagram {
+	width: 75px;
+	height: 75px;
+	margin-right: 73px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.linkedin {
+	width: 75px;
+	height: 75px;
+	margin-top:50px;
+	margin-bottom: 100px;
+}
