@@ -204,30 +204,22 @@ dropdown-box {
 	padding: 20px 0px 0px 0px;
 }
 .facebook {
-	width: 75px;
-	height: 75px;
-	margin-left: 445px;
-	margin-right: 82px;
-	margin-top: 50px;
-	margin-bottom: 100px;
+	width: 72px;
+	height: 72px;
+	margin: 50px 70px 100px 450px;
 }
 .discord {
-	width: 85px;
-	height: 85px;
-	margin-right: 62px;
-	margin-top: 58px;
-	margin-bottom: 100px;
+	width: 88px;
+	height: 88px;
+	margin: 50px 63px 100px 0px;
 }
 .instagram {
-	width: 75px;
-	height: 75px;
-	margin-right: 73px;
-	margin-top: 50px;
-	margin-bottom: 100px;
+	width: 77px;
+	height: 77px;
+	margin: 50px 70px 100px 0px;
 }
-.linkedin {
-	width: 75px;
-	height: 75px;
-	margin-top:50px;
-	margin-bottom: 100px;
+.email {
+	width: 72px;
+	height: 72px;
+	margin: 50px 0px 100px 0px;
 }
