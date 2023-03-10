@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	onResize();
 	$("dropdown-box").each(function(ind, root) {
-		$(".dropdown .header", root).click(function() {
+		$(".header", root).click(function() {
 			const hiddenText = $(this).parent().find(".dropdown-hidden p");
 			const hlines = $(this).parent().find(".dropdown-hidden hr");
 			const svg = $(this).find("svg");
@@ -59,11 +59,7 @@ function updateDropdown(elem) {
 					</svg>
 				</div>
 			<div class="dropdown-hidden"><hr/><p>${bodyText}</p><hr/></div>`;
-			
-	const wrapper = document.createElement("div");
-	wrapper.innerHTML = val;
-	wrapper.setAttribute("class", "dropdown");
-	elem.append(wrapper);
+	elem.innerHTML = val;;
 }
 class DropdownBox extends HTMLElement {
 	
