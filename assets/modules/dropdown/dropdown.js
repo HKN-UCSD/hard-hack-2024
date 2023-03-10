@@ -1,19 +1,16 @@
 $(document).ready(function() {
 	onResize();
-	$("dropdown-box").each(function(ind, elem) {
-		root = elem.shadowRoot;
+	$("dropdown-box").each(function(ind, root) {
 		$(".dropdown .header", root).click(function() {
 			const hiddenText = $(this).parent().find(".dropdown-hidden p");
 			const hlines = $(this).parent().find(".dropdown-hidden hr");
 			const svg = $(this).find("svg");
-			if(hiddenText.height() < 10)
+			if(root.hasAttribute("open"))
 			{
-				hiddenText.css("height", "auto");
-				const autoHeight = hiddenText.height();
-				hiddenText.css("height", "0px");
-				hlines.animate({opacity: 1}, 100);
-				hiddenText.animate({height: autoHeight, margin: "2em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
-				svg.animate({deg: "-180"}, {
+				root.removeAttribute("open")
+				hlines.delay(400).animate({opacity: 0}, 100);
+				hiddenText.animate({height: 0, margin: "0px 1em"}, 500);
+				svg.animate({deg: "0"}, {
 						duration: 500, step: function(val) {
 							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 						}
@@ -22,9 +19,13 @@ $(document).ready(function() {
 			}
 			else
 			{
-				hlines.delay(400).animate({opacity: 0}, 100);
-				hiddenText.animate({height: 0, margin: "0px 1em"}, 500);
-				svg.animate({deg: "0"}, {
+				root.setAttribute("open", "");
+				hiddenText.css("height", "auto");
+				const autoHeight = hiddenText.height();
+				hiddenText.css("height", "0px");
+				hlines.animate({opacity: 1}, 100);
+				hiddenText.animate({height: autoHeight, margin: "2em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
+				svg.animate({deg: "-180"}, {
 						duration: 500, step: function(val) {
 							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 						}
@@ -38,13 +39,13 @@ $(document).ready(function() {
 $(window).resize(onResize);
 
 function onResize() {
-	$("dropdown-box").each(function(ind, elem) {
-		const svg = $("svg", elem.shadowRoot);
-		const hiddenText = $(".dropdown", elem.shadowRoot).find(".dropdown-hidden p");
-		if(hiddenText.height() < 10)
-			svg.css({transform: "rotate(0deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
-		else
+	$("dropdown-box").each(function(ind, root) {
+		const svg = $("svg", root);
+		const hiddenText = $(".dropdown", root).find(".dropdown-hidden p");
+		if(root.hasAttribute("open"))
 			svg.css({transform: "rotate(-180deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+		else
+			svg.css({transform: "rotate(0deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
 	});
 }
 
@@ -62,22 +63,12 @@ function updateDropdown(elem) {
 	const wrapper = document.createElement("div");
 	wrapper.innerHTML = val;
 	wrapper.setAttribute("class", "dropdown");
-	elem.shadowRoot.append(wrapper);
+	elem.append(wrapper);
 }
 class DropdownBox extends HTMLElement {
 	
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
-		
-		var stylesheet = document.createElement("link");
-		stylesheet.setAttribute("rel", "stylesheet");
-		stylesheet.setAttribute("href", "./assets/modules/dropdown/dropdown.css");
-		this.shadowRoot.appendChild(stylesheet);
-		stylesheet = document.createElement("link");
-		stylesheet.setAttribute("rel", "stylesheet");
-		stylesheet.setAttribute("href", "./fonts.css");
-		this.shadowRoot.appendChild(stylesheet);
 	}
 	
 	connectedCallback() {

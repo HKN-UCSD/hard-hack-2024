@@ -1,4 +1,11 @@
-h3, p {
+dropdown-box h3 {
+	color: #ffffff;
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+}
+dropdown-box p {
 	color: #ffffff;
 	font-family: "Poppins";
 	font-style: normal;
@@ -6,18 +13,18 @@ h3, p {
 	font-size: 18px;
 }
 
-.header {
+dropdown-box .header {
 	display: flex;
 	margin: auto;
-	width: 65%;
+	width: 75%;
 	cursor: pointer;
 }
 
-.dropdown {
+dropdown-box .dropdown {
 	margin: auto;
 	width: 100%;
 }
-.header h3 {
+dropdown-box .header h3 {
 	margin: 0px;
 	width: auto;
 	padding: 0.5em 0px;
@@ -25,27 +32,27 @@ h3, p {
 	text-align: left;
 	flex: 1 1 auto;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 24px;
 }
-.header svg {
+dropdown-box .header svg {
 	vertical-align: bottom;
 	transform: rotate(0deg);
 	flex: 0 0 auto;
 	margin: auto;
 }
-.dropdown-hidden {
+dropdown-box .dropdown-hidden {
 	position: relative;
 	margin: inherit;
 	overflow: clip;
 }
-.dropdown-hidden hr {
+dropdown-box .dropdown-hidden hr {
 	border: solid 1px white;
 	height: 2px;
 	background: white;
 	margin: 0px;
 	opacity: 0;
 }
-.dropdown-hidden p {
+dropdown-box .dropdown-hidden p {
 	position: relative;
 	margin: inherit;
 	width: 80%;
