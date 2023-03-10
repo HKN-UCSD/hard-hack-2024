@@ -201,6 +201,7 @@ dropdown-box {
 	font-size: max(10px,min(1em,3vw));
 }
 #socials {
+	
 	justify-content: center;
 	align-items: center;
 	margin: 3vh 0px 0px 0px;
@@ -209,25 +210,29 @@ dropdown-box {
 	display: block;
 	text-align: center;
 	align-items:center;
-	
+	padding: 0px 10px 0px 10px;
 }
 .facebook {
 	width: 4.5em;
 	height: 4.5em;
+	max-width: 72px;
 	margin: 5vh 1.5vw 5vh 0px;
 }
 .discord {
 	width: 5.5em;
 	height: 5.5em;
+	max-width: 88px;
 	margin: 5vh 1.5vw 5vh 1.5vw;
 }
 .instagram {
 	width: 5em;
 	height: 5em;
+	max-width: 77px;
 	margin: 5vh 1.5vw 5vh 1.5vw;
 }
 .email {
 	width: 4.5em;
 	height: 4.5em;
+	max-width: 72px;
 	margin: 5vh 0px 5vh 1.5vw;
 }
