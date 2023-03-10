@@ -61,4 +61,5 @@ dropdown-box .dropdown-hidden p {
 	height: 0px;
 	margin: 0px 1em;
 	overflow: clip;
+	opacity: 0;
 }

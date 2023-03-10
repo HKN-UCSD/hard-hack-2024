@@ -9,7 +9,9 @@ $(document).ready(function() {
 			{
 				root.removeAttribute("open")
 				hlines.delay(400).animate({opacity: 0}, 100);
-				hiddenText.animate({height: 0, margin: "0px 1em"}, 500);
+				hiddenText.animate({height: 0, margin: "0px 1em"}, 500, "swing", function() {
+					hiddenText.css("opacity", "0");
+				});
 				svg.animate({deg: "0"}, {
 						duration: 500, step: function(val) {
 							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
@@ -19,6 +21,7 @@ $(document).ready(function() {
 			}
 			else
 			{
+				hiddenText.css("opacity", "1");
 				root.setAttribute("open", "");
 				hiddenText.css("height", "auto");
 				const autoHeight = hiddenText.height();
