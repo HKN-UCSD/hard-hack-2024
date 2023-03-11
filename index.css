@@ -212,27 +212,17 @@ dropdown-box {
 	align-items:center;
 	padding: 0px 10px 0px 10px;
 }
-.facebook {
-	width: 4.5em;
-	height: 4.5em;
-	max-width: 72px;
-	margin: 5vh 1.5vw 5vh 0px;
-}
-.discord {
-	width: 5.5em;
-	height: 5.5em;
-	max-width: 88px;
-	margin: 5vh 1.5vw 5vh 1.5vw;
-}
 .instagram {
-	width: 5em;
-	height: 5em;
+	width: 4.8em;
+	height: 4.8em;
 	max-width: 77px;
-	margin: 5vh 1.5vw 5vh 1.5vw;
+	max-height: 77px;
+	margin: 5vh 1vw 5vh 0px;
 }
 .email {
-	width: 4.5em;
-	height: 4.5em;
-	max-width: 72px;
-	margin: 5vh 0px 5vh 1.5vw;
+	width: 4.2em;
+	height: 4.2em;
+	max-width: 67px;
+	max-height: 67px;
+	margin: 5vh 0px 5vh 2vw;
 }
