@@ -210,19 +210,19 @@ dropdown-box {
 	display: block;
 	text-align: center;
 	align-items:center;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 10px 0px 0px;
 }
 .instagram {
 	width: 4.8em;
 	height: 4.8em;
 	max-width: 77px;
 	max-height: 77px;
-	margin: 5vh 1vw 5vh 0px;
+	margin: 3vh 1vw 6vh 0px;
 }
 .email {
 	width: 4.2em;
 	height: 4.2em;
 	max-width: 67px;
 	max-height: 67px;
-	margin: 5vh 0px 5vh 2vw;
+	margin: 3vh 0px 6vh 2vw;
 }
