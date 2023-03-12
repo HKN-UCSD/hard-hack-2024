@@ -225,7 +225,7 @@ dropdown-box {
 	width: 8vw;
 	height: 8vw;
 	min-width: 2.9em;
-	max-width: 2.9em;
+	min-width: 2.9em;
 	max-width: 4.2em;
 	max-height: 4.2em;
 	margin: 3vh 0px 12vh 2vw;
