@@ -213,16 +213,16 @@ dropdown-box {
 	padding: 0px 10px 0px 0px;
 }
 .instagram {
-	width: 4.8em;
-	height: 4.8em;
-	max-width: 77px;
-	max-height: 77px;
+	width: 77px;
+	height: 77px;
+	max-width: 4.8em;
+	max-height: 4.8em;
 	margin: 3vh 1vw 12vh 0px;
 }
 .email {
-	width: 4.2em;
-	height: 4.2em;
-	max-width: 67px;
-	max-height: 67px;
+	width: 67px;
+	height: 67px;
+	max-width: 4.2em;
+	max-height: 4.2em;
 	margin: 3vh 0px 12vh 2vw;
 }
