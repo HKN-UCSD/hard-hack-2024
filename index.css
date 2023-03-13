@@ -200,3 +200,32 @@ dropdown-box {
 	margin: auto;
 	font-size: max(10px,min(1em,3vw));
 }
+#socials {
+	justify-content: center;
+	align-items: center;
+	margin: 3vh 0px 0px 0px;
+}
+#icons {
+	display: block;
+	text-align: center;
+	align-items:center;
+	padding: 0px 10px 0px 10px;
+}
+.email {
+	width: 9vw;
+	height: 9vw;
+	min-width: 2.75em;
+	min-height: 2.75em;
+	max-width: 3.9em;
+	max-height: 3.9em;
+	margin: 1vh 2vw 12vh 0px;
+}
+.instagram {
+	width: 10vw;
+	height: 10vw;
+	min-width: 2.9em;
+	min-height: 2.9em;
+	max-width: 4.2em;
+	max-height: 4.2em;
+	margin: 1vh 0px 12vh 1.5vw;
+}
