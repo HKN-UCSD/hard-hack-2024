@@ -209,7 +209,7 @@ dropdown-box {
 	display: block;
 	text-align: center;
 	align-items:center;
-	padding: 0px 10px 0px 0px;
+	padding: 0px 10px 0px 10px;
 }
 .email {
 	width: 9vw;
