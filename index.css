@@ -154,6 +154,16 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 150%;
 }
 
+#about-page {
+	text-align: center;
+	min-height: max(60vh,500px);
+	max-height: 100vh;
+	padding: 0px 0px max(4em,10vh) 0px;
+	
+	overflow-x: clip;
+	overflow-y: visible;
+}
+
 .flexpad {
 	flex: 1 1 auto;
 }
@@ -173,6 +183,20 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .big-button:hover {
 	background-color: #eb4dcb;
+	cursor: pointer;
+}
+
+.projects-button {
+    border-style: solid;
+    border-color: white;
+	white-space: normal;
+	background-color: rgba(0,0,0,0);
+	line-height: 0;
+	border-radius: 2em;
+	padding: 1.4em 2em;
+}
+.projects-button:hover {
+	background-color: rgba(255,255,255,0.3);
 	cursor: pointer;
 }
 
