@@ -235,7 +235,6 @@ dropdown-box {
 	padding: 0px 10px 0px 10px;
 }
 .email {
-	float: middle;
 	width: 9vw;
 	height: 9vw;
 	min-width: 2.75em;
@@ -245,7 +244,6 @@ dropdown-box {
 	margin: 1vh 2vw 12vh 0px;
 }
 .instagram {
-	float: middle;
 	width: 10vw;
 	height: 10vw;
 	min-width: 2.9em;
