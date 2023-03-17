@@ -13,7 +13,7 @@ $(document).ready(function() {
 	}
 	
 	$("#img_fallenstar").animate({"--progress": "1"}, {
-		duration: 1000, step: function(val) {
+		duration: 600, step: function(val) {
 			$(this).css({"--progress": val});
 			
 			const height = $(window).height();
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 900, "swing", function() {
+	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 550, "swing", function() {
 		$(this).css({left: "max(96px,35%)"});
 	});
 	
