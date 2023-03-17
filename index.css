@@ -144,8 +144,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #img_library {
 	position: absolute;
-	height: 340px;
-	width: 80%;
+	width: 140%;
 	min-width: 380px;
 	object-fit: contain;
 	object-position: right;

@@ -12,14 +12,14 @@ $(document).ready(function() {
 		$("#icon").css({display: "block"});
 	}
 	
+			
+	const height = $(window).height();
+	const width = $(window).width();
+	const t = Math.max(Math.min((height - width + 250)/250,1),0);
+	const s = Math.max(Math.min((height - width)/100,1),0);
 	$("#img_fallenstar").animate({"--progress": "1"}, {
 		duration: 600, step: function(val) {
 			$(this).css({"--progress": val});
-			
-			const height = $(window).height();
-			const width = $(window).width();
-			const t = Math.max(Math.min((height - width + 250)/250,1),0);
-			const s = Math.max(Math.min((height - width)/100,1),0);
 			
 			const container = $("#img_fallenstar_container");
 			const fallenstar = $("#img_fallenstar");
@@ -32,8 +32,8 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#img_library").animate({left: Math.max(96,parseInt($("#img_library").css("left"))*7/30)+"px"}, 550, "swing", function() {
-		$(this).css({left: "max(96px,35%)"});
+	$("#img_library").animate({left: Math.max(0,600-width)+"px"}, 550, "swing", function() {
+		$("#img_library").css("left", Math.max(0,600-width) + "px");
 	});
 	
 	$(".hamburger-icon").click(function() {
@@ -62,6 +62,8 @@ function onResize() {
 			
 	fallenstar.css({height: (80-10*t) + "%", top: (8*t-s*8+10) + "%"});
 	fallenstar.css("left", Math.min(-(1-fallenstar.css("--progress"))*fallenstar.width(),container.width()-fallenstar.width()) + "px");
+	
+	$("#img_library").css("left", Math.max(0,600-width) + "px");
 	
 	if(width<560)
 	{
