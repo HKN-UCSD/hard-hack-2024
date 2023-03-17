@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: absolute;
 	display: none;
 	width: 100%;
+	z-index: 1;
 }
 #dropdown-menu-bar a {
 	text-decoration: none;
