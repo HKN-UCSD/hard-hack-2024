@@ -13,13 +13,13 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
 	color: #ffffff;
-	font-family: "Lexend Peta";
+	font-family: "Poppins";
 	font-style: normal;
 	text-align: center;
 }
-.main-font, .dropdown-hidden {
+.main-font {
 	color: #ffffff;
-	font-family: "Lexend Peta";
+	font-family: "Poppins";
 	font-style: normal;
 	text-align: center;
 }
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 #menu-bar span {
 	color: #ffffff;
-	font-family: "Lexend Peta";
+	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: relative;
 	
 	color: #ffffff;
-	font-family: "Lexend Peta";
+	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
