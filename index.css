@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p {
 	position: absolute;
 	display: flex;
 	right: 0px;
-	margin-right: 4em;
+	margin-right: 4px;
 	z-index: 1;
 	padding: 1em 0px;
 }
