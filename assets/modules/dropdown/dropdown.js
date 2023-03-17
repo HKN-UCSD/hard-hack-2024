@@ -62,7 +62,7 @@ function updateDropdown(elem) {
 					</svg>
 				</div>
 			<div class="dropdown-hidden"><hr/><p>${bodyText}</p><hr/></div>`;
-	elem.innerHTML = val;;
+	elem.innerHTML = val;
 }
 class DropdownBox extends HTMLElement {
 	
