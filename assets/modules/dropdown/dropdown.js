@@ -9,7 +9,7 @@ $(document).ready(function() {
 			{
 				root.removeAttribute("open")
 				hlines.delay(400).animate({opacity: 0}, 100);
-				hiddenText.animate({height: 0, margin: "0px 1em"}, 500, "swing", function() {
+				hiddenText.animate({height: 0, margin: "0px auto"}, 500, "swing", function() {
 					hiddenText.css("opacity", "0");
 				});
 				svg.animate({deg: "0"}, {
@@ -27,7 +27,7 @@ $(document).ready(function() {
 				const autoHeight = hiddenText.height();
 				hiddenText.css("height", "0px");
 				hlines.animate({opacity: 1}, 100);
-				hiddenText.animate({height: autoHeight, margin: "2em 1em"}, 500, "swing", function() {$(this).css("height", "auto")});
+				hiddenText.animate({height: autoHeight, margin: "2em auto"}, 500, "swing", function() {$(this).css("height", "auto")});
 				svg.animate({deg: "-180"}, {
 						duration: 500, step: function(val) {
 							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});

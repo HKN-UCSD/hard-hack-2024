@@ -60,12 +60,11 @@ dropdown-box .dropdown-hidden hr {
 }
 dropdown-box .dropdown-hidden p {
 	position: relative;
-	margin: inherit;
 	width: 80%;
 	font-size: max(0.75em,14px);
 	text-align: left;
 	height: 0px;
-	margin: 0px 1em;
+	margin: 0px auto;
 	overflow: clip;
 	opacity: 0;
 }
