@@ -38,10 +38,19 @@ $(document).ready(function() {
 	
 	$(".hamburger-icon").click(function() {
 		const icon = $(this);
-		icon.toggleClass("hamburger-change");
-		const items = $("#dropdown-menu-bar-items");
-		const h = icon.hasClass("hamburger-change") ? items.children().first().height() : 0;
-		items.animate({height: h + "px"}, 300);
+		if(icon.attr("transitioning") == null)
+		{
+			icon.attr("transitioning", "");
+			icon.toggleClass("hamburger-change");
+			const items = $("#dropdown-menu-bar-items");
+			const h = icon.hasClass("hamburger-change") ? items.children().first().height() : 0;
+			items.animate({height: h + "px"}, { delay: 400, queue: false,
+					complete: function() {
+						icon.removeAttr("transitioning");
+					}
+				}
+			);
+		}
 	});
 	
 	onResize();
