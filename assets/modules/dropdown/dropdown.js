@@ -5,35 +5,49 @@ $(document).ready(function() {
 			const hiddenText = $(this).parent().find(".dropdown-hidden p");
 			const hlines = $(this).parent().find(".dropdown-hidden hr");
 			const svg = $(this).find("svg");
-			if(root.hasAttribute("open"))
+			if(!root.hasAttribute("transitioning"))
 			{
-				root.removeAttribute("open")
-				hlines.delay(400).animate({opacity: 0}, 100);
-				hiddenText.animate({height: 0, margin: "0px auto"}, 500, "swing", function() {
-					hiddenText.css("opacity", "0");
-				});
-				svg.animate({deg: "0"}, {
-						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+				root.setAttribute("transitioning", "");
+				if(root.hasAttribute("open"))
+				{
+					root.removeAttribute("open");
+					hiddenText.animate({height: 0, margin: "0px auto"}, {
+							delay: 500, queue: false, complete: function() {
+								hiddenText.css("opacity", "0");
+								root.removeAttribute("transitioning");
+							}
 						}
-					}
-				);
-			}
-			else
-			{
-				hiddenText.css("opacity", "1");
-				root.setAttribute("open", "");
-				hiddenText.css("height", "auto");
-				const autoHeight = hiddenText.height();
-				hiddenText.css("height", "0px");
-				hlines.animate({opacity: 1}, 100);
-				hiddenText.animate({height: autoHeight, margin: "2em auto"}, 500, "swing", function() {$(this).css("height", "auto")});
-				svg.animate({deg: "-180"}, {
-						duration: 500, step: function(val) {
-							$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+					);
+					svg.animate({deg: "0"}, {
+							duration: 500, queue: false, step: function(val) {
+								$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+							}
 						}
-					}
-				);
+					);
+					hlines.delay(400).animate({opacity: 0}, 100);
+				}
+				else
+				{
+					root.setAttribute("open", "");
+					hiddenText.css({"opacity": 1, "height": "auto"});
+					const autoHeight = hiddenText.height();
+					hiddenText.css("height", "0px");
+					
+					hlines.animate({opacity: 1}, 100);
+					hiddenText.animate({height: autoHeight, margin: "2em auto"}, {
+							delay: 500, queue: false, complete: function() {
+								$(this).css("height", "auto");
+								root.removeAttribute("transitioning");
+							}
+						}
+					);
+					svg.animate({deg: "-180"}, {
+							duration: 500, queue: false, step: function(val) {
+								$(this).css({transform: "rotate(" + val + "deg) scale(" + parseInt($(this).css("font-size"))/16 + ")"});
+							}
+						}
+					);
+				}
 			}
 		});
 	});
