@@ -283,16 +283,28 @@
     <div class="center" id="questions-div" style="padding-bottom: 4em">
       <h1 style="margin-bottom: 1em">Any More Questions?</h1>
       <form id="questionsForm">
-        <input type="text" id="title" placeholder="Title (Optional)" />
-        <br />
-        <input type="text" id="email" placeholder="Email" />
+        <input
+          type="text"
+          id="email"
+          placeholder="Email"
+          style="
+            width: min(80%, 600px);
+            height: 36px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: none;
+          "
+        />
         <br />
         <textarea
           type="text"
           id="question"
-          rows="5"
+          rows="10"
           cols="50"
           placeholder="Enter Your Question Here..."
+          style="width: min(80%, 600px); padding: 10px; border-radius: 8px"
         ></textarea>
       </form>
       <br />
@@ -300,7 +312,7 @@
       <button onclick="submitForm()" class="projects-button center main-font">
         Submit Form
       </button>
-      <p id="error"></p>
+      <p id="error">TEST</p>
     </div>
     <script>
       function clearMessage() {
@@ -308,7 +320,7 @@
       }
 
       function submitForm() {
-        const title = document.getElementById("title").value;
+        console.log("pressed");
         const email = document.getElementById("email").value;
         const question = document.getElementById("question").value;
         if (email == "") {
@@ -319,20 +331,17 @@
             "Question Field Cannot Be Empty";
         } else {
           let url =
-            "https://docs.google.com/forms/d/e/1FAIpQLScL03JvRksSbVFHlKKK1VXhFwd-LptTNddiBV1-luznvHlDfA/formResponse?usp=pp_url";
-          if (title != "") {
-            url += "&entry.1477891210=" + encodeURIComponent(title);
-          }
+            "https://docs.google.com/forms/d/e/1FAIpQLScq_QdWo8Y_mPnKSTRerhu11__t2NwnedWEzKvqf5_13xtTgQ/formResponse?usp=pp_url";
           url +=
-            "&entry.833700864=" +
+            "&entry.333490010=" +
             encodeURIComponent(email) +
-            "&entry.1075621977=" +
+            "&entry.1301356340=" +
             encodeURIComponent(question) +
             "&submit=Submit";
 
           fetch(url);
           document.getElementById("error").innerHTML =
-            "Your Question Was Successfully Submitted";
+            "Your Question Was Successfully Submitted!";
           document.getElementById("questionsForm").reset();
           setTimeout(clearMessage, 5000);
         }
