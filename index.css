@@ -9,12 +9,13 @@ body {
 	min-height: max(300px,100%);
 	min-width: 300px;
 	background-image: linear-gradient(#158dc1, #923be6);
+	color: #ffffff;
 }
 * {
 	font-family: "Lexend Peta";
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a {
 	color: #ffffff;
 	font-style: normal;
 	text-align: center;
@@ -152,7 +153,7 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 150%;
 }
 
-#about-page {
+#about-page, .text-page {
 	text-align: center;
 	min-height: max(60vh,500px);
 	padding: 0px 0px max(4em,10vh) 0px;
@@ -250,4 +251,47 @@ dropdown-box {
 	max-width: 4.2em;
 	max-height: 4.2em;
 	margin: 1vh 0px 12vh 1.5vw;
+}
+.basic-paragraph, .basic-paragraph a {
+	font-size: 1em;
+	font-family: Poppins;
+	font-weight: 400;
+	padding-bottom: max(3em, 3vh);
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+	text-align: left;
+}
+
+ul {
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+	text-align: left;
+}
+
+li {
+	font-family: Poppins;
+}
+
+table {
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+}
+
+table td, table th {
+	padding: .5em .25em;
+}
+table.sponsorship-table th {
+	text-align: left;
+}
+table.sponsorship-table td {
+	text-align: center;
+}
+
+table.benefits-table th {
+	text-align: center;
+}
+
+table.benefits-table td {
+	text-align: left;
+	font-family: Poppins;
 }
