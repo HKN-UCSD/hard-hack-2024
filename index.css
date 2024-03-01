@@ -208,7 +208,7 @@ h1, h2, h3, h4, h5, h6, p {
 	z-index: 2;
 }
 
-#faq-page {
+#faq-page, #sponsor-faq-page {
 	padding: 0px 0px 4em 0px;
 	min-width: 300px;
 }
