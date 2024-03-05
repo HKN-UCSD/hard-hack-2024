@@ -8,7 +8,7 @@ body {
 	margin: 0px;
 	min-height: max(300px,100%);
 	min-width: 300px;
-	background-image: linear-gradient(#158dc1, #923be6);
+	background-image: "assets/images/background.png";
 	color: #ffffff;
 }
 * {
