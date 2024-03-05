@@ -56,8 +56,8 @@
   <!-- START OF BODY -->
   <body>
     <div id="menu-bar" class="background-element">
-      <a href="/index"><span>Home</span></a>
-      <a href="/sponsors"><span>Sponsors</span></a>
+      <a href="#about-page"><span>About</span></a>
+      <a href="#faq-page"><span>FAQ</span></a>
     </div>
     <div id="dropdown-menu-bar" class="background-element">
       <div
@@ -80,8 +80,8 @@
       >
         <div>
           <div style="height: 68px"></div>
-          <a href="/index"><p>Home</p></a>
-          <a href="/sponsors"><p>Sponsors</p></a>
+          <a href="#about-page"><p>About</p></a>
+          <a href="#faq-page"><p>FAQ</p></a>
         </div>
       </div>
     </div>
@@ -92,8 +92,6 @@
         style="width: 5%; min-width: 50px; top: max(3vh, 20px); left: 20px"
       />
     </div>
-
-    
     <div id="cover-page">
       <div id="cover-flex">
         <div class="flexpad" style="min-width: 150px; position: relative">
@@ -156,9 +154,8 @@
         </button></a
       >
     </div>
-
     <div id="about-page">
-      <h1 style="margin-bottom:1em">About</h1>
+      <h1 style="margin-bottom: 1em">About</h1>
       <p
         style="
           font-size: 1em;
@@ -243,7 +240,7 @@
 
     <!-- FAQ -->
     <div id="faq-page">
-      <h1 style="margin-bottom:1em">FAQ</h1>
+      <h1 style="margin-bottom: 1em">FAQ</h1>
       <dropdown-box
         header="What is a hackathon?"
         text="A hackathon is a gathering where people collaboratively build a project from the ground-up over a short period of time. While working on a particular project, the idea is for each group member to have the ability and freedom to work on whatever they want."
@@ -282,9 +279,128 @@
       ></dropdown-box>
     </div>
 
+    <!-- ASK QUESTIONS -->
+    <div class="center" id="questions-div" style="padding-bottom: 4em">
+      <h1 style="margin-bottom: 1em">Any More Questions?</h1>
+      <form id="questionsForm">
+        <input
+          type="text"
+          id="email"
+          placeholder="Email"
+          style="
+            width: min(80%, 600px);
+            height: 36px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: none;
+          "
+        />
+        <br />
+        <textarea
+          type="text"
+          id="question"
+          rows="10"
+          cols="50"
+          placeholder="Enter Your Question Here..."
+          style="width: min(80%, 600px); padding: 10px; border-radius: 8px"
+        ></textarea>
+      </form>
+      <br />
+
+      <button onclick="submitForm()" class="projects-button center main-font">
+        Submit Form
+      </button>
+      <p id="error"></p>
+    </div>
+    <script>
+      function clearMessage() {
+        document.getElementById("error").innerHTML = "";
+      }
+
+      function submitForm() {
+        console.log("pressed");
+        const email = document.getElementById("email").value;
+        const question = document.getElementById("question").value;
+        if (email == "") {
+          document.getElementById("error").innerHTML =
+            "Email Field Cannot Be Empty";
+        } else if (question == "") {
+          document.getElementById("error").innerHTML =
+            "Question Field Cannot Be Empty";
+        } else {
+          let url =
+            "https://docs.google.com/forms/d/e/1FAIpQLScq_QdWo8Y_mPnKSTRerhu11__t2NwnedWEzKvqf5_13xtTgQ/formResponse?usp=pp_url";
+          url +=
+            "&entry.333490010=" +
+            encodeURIComponent(email) +
+            "&entry.1301356340=" +
+            encodeURIComponent(question) +
+            "&submit=Submit";
+
+          fetch(url);
+          document.getElementById("error").innerHTML =
+            "Your Question Was Successfully Submitted!";
+          document.getElementById("questionsForm").reset();
+          setTimeout(clearMessage, 5000);
+        }
+      }
+    </script>
+
+    <!-- SPONSORS -->
+    <div id="faq-page">
+      <h1 style="margin-bottom: 1em">Sponsors</h1>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <img
+          src="assets/images/digikeylogo.png"
+          style="
+            max-height: 100%;
+            max-width: min(300px, 55vw);
+            width: auto;
+            padding: 10px;
+          "
+        />
+        <img
+          src="assets/images/ucsdecelogo.png"
+          style="
+            max-height: 100%;
+            max-width: min(300px, 55vw);
+            width: auto;
+            padding: 10px;
+            margin-top: 50px;
+          "
+        />
+        <img
+          src="assets/images/infineonlogo.png"
+          style="
+            max-height: 100%;
+            max-width: min(350px, 55vw);
+            width: auto;
+            padding: 10px;
+          "
+        />
+        <img
+          src="assets/images/aslogo.png"
+          style="
+            max-height: 100%;
+            max-width: min(200px, 55vw);
+            width: auto;
+            padding: 10px;
+          "
+        />
+      </div>
+    </div>
 
     <!-- SOCIALS -->
-    <!-- <div id="socials">
+    <div id="socials">
       <p
         class="center"
         style="
@@ -313,6 +429,6 @@
           <img class="instagram" src="./assets/social_icons/instagram.svg"
         /></a>
       </div>
-    </div> -->
+    </div>
   </body>
 </html>
