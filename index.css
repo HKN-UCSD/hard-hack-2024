@@ -297,22 +297,25 @@ table.benefits-table td {
 	font-family: Poppins;
 }
 
+table.directors-table {
+	max-width: max(500px, 50vw);
+}
+
 table.directors-table tr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: max(500px, 70vw)
 }
 
 table.directors-table th {
 	text-align: left;
 	font-family: Poppins;
-	width: min(45vw);
+	width: min(320px, 35vw);
 }
 
 table.directors-table td {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: min(25vw);
+	width: min(280px, 15vw);
 }
