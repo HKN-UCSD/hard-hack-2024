@@ -296,3 +296,12 @@ table.benefits-table td {
 	text-align: left;
 	font-family: Poppins;
 }
+
+table.directors-table th {
+	text-align: left;
+	font-family: Poppins;
+}
+
+table.directors-table td {
+	align-items:center;
+}
