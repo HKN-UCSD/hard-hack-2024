@@ -9,16 +9,22 @@ body {
 	min-height: max(300px,100%);
 	min-width: 300px;
 	background-image: linear-gradient(#158dc1, #923be6);
+	color: #ffffff;
 }
 * {
 	font-family: "Lexend Peta";
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a {
 	color: #ffffff;
 	font-style: normal;
 	text-align: center;
 }
+
+h1 {
+	margin: 0px 5% 0px 5%;
+}
+
 .main-font {
 	color: #ffffff;
 	font-style: normal;
@@ -33,9 +39,11 @@ h1, h2, h3, h4, h5, h6, p {
 	z-index: 1;
 	padding: 1em 0px;
 }
+
 #menu-bar a {
 	text-decoration: none;
 }
+
 #menu-bar span {
 	color: #ffffff;
 	font-style: normal;
@@ -44,25 +52,30 @@ h1, h2, h3, h4, h5, h6, p {
 	
 	padding: 1em;
 }
+
 #menu-bar span:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
 #dropdown-menu-bar {
 	position: absolute;
 	display: none;
 	width: 100%;
 	z-index: 1;
 }
+
 #dropdown-menu-bar a {
 	text-decoration: none;
 }
+
 .hamburger-icon {
 	height: 36px;
 	width: 32px;
 	display: inline-block;
 	cursor: pointer;	
 }
+
 .hamburger-bar1, .hamburger-bar2, .hamburger-bar3 {
   width: 35px;
   height: 5px;
@@ -70,9 +83,11 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 6px 0;
   transition: 0.4s;
 }
+
 .hamburger-change .hamburger-bar1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
+
 .hamburger-change .hamburger-bar2 {opacity: 0;}
 .hamburger-change .hamburger-bar3 {
   transform: translate(0, -11px) rotate(45deg);
@@ -91,10 +106,12 @@ h1, h2, h3, h4, h5, h6, p {
 	margin: auto;
 	padding: 16px 0px;
 }
+
 #dropdown-menu-bar p:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
+
 #dropdown-menu-bar-items {
 }
 
@@ -120,12 +137,14 @@ h1, h2, h3, h4, h5, h6, p {
 	overflow-x: clip;
 	overflow-y: visible;
 }
+
 #cover-flex {
 	display: flex;
 	justify-content: center;
 	height: 100%;
 	min-height: 400px;
 }
+
 #img_fallenstar_container {
 	width: 130%;
 	height: 140%;
@@ -134,6 +153,7 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
 	justify-content: flex-end;
 }
+
 #img_fallenstar {
 	position: absolute;
 	height: 80%;
@@ -142,6 +162,7 @@ h1, h2, h3, h4, h5, h6, p {
 	display: block;
 	--progress: 0;
 }
+
 #img_library {
 	position: absolute;
 	width: 140%;
@@ -152,7 +173,7 @@ h1, h2, h3, h4, h5, h6, p {
 	left: 150%;
 }
 
-#about-page {
+#about-page, .text-page {
 	text-align: center;
 	min-height: max(60vh,500px);
 	padding: 0px 0px max(4em,10vh) 0px;
@@ -179,6 +200,7 @@ h1, h2, h3, h4, h5, h6, p {
 	border-radius: 2em;
 	padding: 1.4em 2em;
 }
+
 .big-button:hover {
 	background-color: #eb4dcb;
 	cursor: pointer;
@@ -193,6 +215,7 @@ h1, h2, h3, h4, h5, h6, p {
 	border-radius: 2em;
 	padding: 1.4em 2em;
 }
+
 .projects-button:hover {
 	background-color: rgba(255,255,255,0.3);
 	cursor: pointer;
@@ -208,7 +231,7 @@ h1, h2, h3, h4, h5, h6, p {
 	z-index: 2;
 }
 
-#faq-page {
+#faq-page, #sponsor-faq-page {
 	padding: 0px 0px 4em 0px;
 	min-width: 300px;
 }
@@ -222,17 +245,20 @@ dropdown-box {
 	margin: auto;
 	font-size: max(10px,min(1em,3vw));
 }
+
 #socials {
 	justify-content: center;
 	align-items: center;
 	margin: 3vh 0px 0px 0px;
 }
+
 #icons {
 	display: block;
 	text-align: center;
 	align-items:center;
 	padding: 0px 10px 0px 10px;
 }
+
 .email {
 	width: 9vw;
 	height: 9vw;
@@ -242,6 +268,7 @@ dropdown-box {
 	max-height: 3.9em;
 	margin: 1vh 2vw 12vh 0px;
 }
+
 .instagram {
 	width: 10vw;
 	height: 10vw;
@@ -250,4 +277,80 @@ dropdown-box {
 	max-width: 4.2em;
 	max-height: 4.2em;
 	margin: 1vh 0px 12vh 1.5vw;
+}
+
+.basic-paragraph, .basic-paragraph a {
+	font-size: 1em;
+	font-family: Poppins;
+	font-weight: 400;
+	padding-bottom: max(3em, 3vh);
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+	text-align: left;
+}
+
+ul {
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+	text-align: left;
+}
+
+li {
+	font-family: Poppins;
+}
+
+table {
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
+}
+
+table td, table th {
+	padding: .5em .25em;
+}
+
+table.sponsorship-table {
+	scale: auto;
+}
+
+table.sponsorship-table th {
+	text-align: left;
+}
+
+table.sponsorship-table td {
+	text-align: center;
+	font-size: xx-large;
+}
+
+table.benefits-table th {
+	text-align: left;
+}
+
+table.benefits-table td {
+	text-align: left;
+	font-family: Poppins;
+}
+
+table.directors-table {
+	max-width: max(500px, 50vw);
+}
+
+table.directors-table tr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+table.directors-table th {
+	text-align: left;
+	font-family: Poppins;
+	width: min(320px, 35vw);
+	min-width: 230px;
+}
+
+table.directors-table td {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: min(280px, 15vw);
+	min-width: 100px;
 }
