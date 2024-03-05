@@ -301,17 +301,18 @@ table.directors-table tr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	max-width: max(500px, 70vw)
 }
 
 table.directors-table th {
 	text-align: left;
 	font-family: Poppins;
-	width: 60vw;
+	width: min(45vw);
 }
 
 table.directors-table td {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 40vw;
+	width: min(25vw);
 }
