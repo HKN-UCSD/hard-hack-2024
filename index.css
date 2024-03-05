@@ -9,7 +9,7 @@ body {
 	min-height: max(300px,100%);
 	min-width: 300px;
 	background-image: "assets/images/background.png";
-	color: #ffffff;
+	background-attachment: fixed;
 }
 * {
 	font-family: "Lexend Peta";
@@ -302,6 +302,7 @@ li {
 table {
 	max-width: min(700px, 80vw);
 	margin: 0 auto;
+	color:white;
 }
 
 table td, table th {
@@ -309,7 +310,6 @@ table td, table th {
 }
 
 table.sponsorship-table {
-	scale: auto;
 }
 
 table.sponsorship-table th {
