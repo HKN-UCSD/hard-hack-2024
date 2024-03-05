@@ -312,8 +312,13 @@
       <button onclick="submitForm()" class="projects-button center main-font">
         Submit Form
       </button>
+      <p id="error"></p>
     </div>
     <script>
+      function clearMessage() {
+        document.getElementById("error").innerHTML = "";
+      }
+
       function submitForm() {
         console.log("pressed");
         const email = document.getElementById("email").value;
