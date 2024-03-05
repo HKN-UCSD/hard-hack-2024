@@ -8,7 +8,7 @@ body {
 	margin: 0px;
 	min-height: max(300px,100%);
 	min-width: 300px;
-	background-image: "assets/images/background.png";
+	background-image: url("assets/images/background.png");
 	background-attachment: fixed;
 }
 * {
