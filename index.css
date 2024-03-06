@@ -10,9 +10,9 @@ body {
 	min-width: 300px;
 	background-image: url("assets/images/background.png");
 	background-position: center;
-	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto;
+	background-attachment: scroll;
 }
 * {
 	font-family: "Lexend Peta";
