@@ -67,3 +67,55 @@
 	font-weight: 900;
 	font-style: italic;
 }
+
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-Thin.ttf");
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-ThinItalic.ttf");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-Italic.ttf");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-Medium.ttf");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-MediumItalic.ttf");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-Bold.ttf");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Futura";
+	src: url("./assets/fonts/futura/Futura-BoldItalic.ttf");
+	font-weight: 700;
+	font-style: italic;
+}

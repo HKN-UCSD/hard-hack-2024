@@ -197,6 +197,7 @@ h1 {
 
 .big-button {
 	white-space: normal;
+	color: black;
 	background-color: #e8e5b0;
 	border: none;
 	line-height: 0;
@@ -205,7 +206,7 @@ h1 {
 }
 
 .big-button:hover {
-	background-color: #d4d1a3;
+	background-color: rgba(191,189,147,0.5);
 	cursor: pointer;
 }
 
@@ -213,7 +214,7 @@ h1 {
     border-style: solid;
     border-color: white;
 	white-space: normal;
-	background-color: rgba(0,0,0,0);
+	background-color: #5F69A6;
 	line-height: 0;
 	border-radius: 2em;
 	padding: 1.4em 2em;
