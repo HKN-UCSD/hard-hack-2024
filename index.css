@@ -12,7 +12,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
-	background-attachment: scroll;
+	background-attachment: fixed;
 }
 * {
 	font-family: "Lexend Peta";
@@ -313,6 +313,8 @@ table td, table th {
 }
 
 table.sponsorship-table {
+	max-width: min(700px, 80vw);
+	margin: 0 auto;
 }
 
 table.sponsorship-table th {
