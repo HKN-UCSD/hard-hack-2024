@@ -56,8 +56,8 @@
   <!-- START OF BODY -->
   <body>
     <div id="menu-bar" class="background-element">
-      <a href="#about-page"><span>About</span></a>
-      <a href="#faq-page"><span>FAQ</span></a>
+      <a href="/index"><span>Home</span></a>
+      <a href="/sponsors"><span>Sponsors</span></a>
     </div>
     <div id="dropdown-menu-bar" class="background-element">
       <div
@@ -71,7 +71,7 @@
       <div
         id="dropdown-menu-bar-items"
         style="
-          background-color: #158dc1;
+          background-image: url(./assets/images/background.png);
           position: relative;
           width: 100%;
           height: 0px;
@@ -80,8 +80,8 @@
       >
         <div>
           <div style="height: 68px"></div>
-          <a href="#about-page"><p>About</p></a>
-          <a href="#faq-page"><p>FAQ</p></a>
+          <a href="/index"><p>Home</p></a>
+          <a href="/sponsors"><p>Sponsors</p></a>
         </div>
       </div>
     </div>
@@ -89,26 +89,20 @@
       <img
         class="background-element"
         src="./assets/images/hard_hack_small_logo.png"
-        style="width: 5%; min-width: 50px; top: max(3vh, 20px); left: 20px"
+        style="width: 10%; min-width: 50px; top: max(3vh, 20px); left: 20px"
       />
     </div>
+
+    
     <div id="cover-page">
       <div id="cover-flex">
-        <div class="flexpad" style="min-width: 150px; position: relative">
-          <div id="img_fallenstar_container">
-            <img
-              id="img_fallenstar"
-              src="./assets/images/hard_hack_fallenstar(2023).png"
-            />
-          </div>
-        </div>
         <div>
           <div style="max-height: 60vh; display: flex; flex-direction: column">
             <img
               class="center"
-              src="./assets/images/hard_hack_logo(2023).png"
+              src="./assets/images/hard_hack_logo.png"
               style="
-                max-height: 283px;
+                max-height: 400px;
                 min-height: 157px;
                 display: block;
                 flex: 6 6 60%;
@@ -131,21 +125,16 @@
               id="eventdate"
               style="font-size: max(16px, min(2vw, 4vh)); flex: 2 2 20%"
             >
-              April 15 - 16
+              April 13 - 14
             </h3>
           </div>
-        </div>
-        <div class="flexpad" style="min-width: 24px; position: relative">
-          <img
-            id="img_library"
-            src="./assets/images/hard_hack_library2(2023).png"
-          />
         </div>
       </div>
       <a
         id="apply-link"
-        href="https://forms.gle/wDBsqZvTqUorAfCg7"
+        href="https://forms.gle/J1aCmrzgfmGcwAFN9"
         style="display: block; font-size: min(2.5vh, 1em); position: sticky"
+        target="_blank"
         ><button
           class="big-button center main-font"
           style="font-weight: 700; font-size: max(16px, min(5vw, 1.5em))"
@@ -154,8 +143,9 @@
         </button></a
       >
     </div>
+
     <div id="about-page">
-      <h1 style="margin-bottom: 1em">About</h1>
+      <h1 style="margin-bottom:1em">About</h1>
       <p
         style="
           font-size: 1em;
@@ -181,7 +171,7 @@
       </p>
       <div
         style="
-          display: block;
+          display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: row;
@@ -191,15 +181,15 @@
       >
         <img
           src="assets/images/hknlogo.png"
-          style="max-height: 100px; width: auto; flex-shrink: 0"
+          style="height: auto; width: 100px; flex-shrink: 0"
         />
         <img
           src="assets/images/ieeelogo.png"
-          style="max-height: 100px; width: auto; flex-shrink: 0"
+          style="height: auto; width: 150px; flex-shrink: 0"
         />
         <img
           src="assets/images/tntlogo.png"
-          style="max-height: 100px; width: auto; flex-shrink: 0"
+          style="height: auto; width: 100px; flex-shrink: 0"
         />
       </div>
 
@@ -240,7 +230,7 @@
 
     <!-- FAQ -->
     <div id="faq-page">
-      <h1 style="margin-bottom: 1em">FAQ</h1>
+      <h1 style="margin-bottom:1em">FAQ</h1>
       <dropdown-box
         header="What is a hackathon?"
         text="A hackathon is a gathering where people collaboratively build a project from the ground-up over a short period of time. While working on a particular project, the idea is for each group member to have the ability and freedom to work on whatever they want."
@@ -279,128 +269,78 @@
       ></dropdown-box>
     </div>
 
-    <!-- ASK QUESTIONS -->
-    <div class="center" id="questions-div" style="padding-bottom: 4em">
-      <h1 style="margin-bottom: 1em">Any More Questions?</h1>
-      <form id="questionsForm">
-        <input
-          type="text"
-          id="email"
-          placeholder="Email"
-          style="
-            width: min(80%, 600px);
-            height: 36px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border: none;
-          "
-        />
-        <br />
-        <textarea
-          type="text"
-          id="question"
-          rows="10"
-          cols="50"
-          placeholder="Enter Your Question Here..."
-          style="width: min(80%, 600px); padding: 10px; border-radius: 8px"
-        ></textarea>
-      </form>
-      <br />
 
-      <button onclick="submitForm()" class="projects-button center main-font">
-        Submit Form
-      </button>
-      <p id="error"></p>
-    </div>
-    <script>
-      function clearMessage() {
-        document.getElementById("error").innerHTML = "";
-      }
-
-      function submitForm() {
-        console.log("pressed");
-        const email = document.getElementById("email").value;
-        const question = document.getElementById("question").value;
-        if (email == "") {
-          document.getElementById("error").innerHTML =
-            "Email Field Cannot Be Empty";
-        } else if (question == "") {
-          document.getElementById("error").innerHTML =
-            "Question Field Cannot Be Empty";
-        } else {
-          let url =
-            "https://docs.google.com/forms/d/e/1FAIpQLScq_QdWo8Y_mPnKSTRerhu11__t2NwnedWEzKvqf5_13xtTgQ/formResponse?usp=pp_url";
-          url +=
-            "&entry.333490010=" +
-            encodeURIComponent(email) +
-            "&entry.1301356340=" +
-            encodeURIComponent(question) +
-            "&submit=Submit";
-
-          fetch(url);
-          document.getElementById("error").innerHTML =
-            "Your Question Was Successfully Submitted!";
-          document.getElementById("questionsForm").reset();
-          setTimeout(clearMessage, 5000);
-        }
-      }
-    </script>
-
-    <!-- SPONSORS -->
-    <div id="faq-page">
-      <h1 style="margin-bottom: 1em">Sponsors</h1>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        <img
-          src="assets/images/digikeylogo.png"
-          style="
-            max-height: 100%;
-            max-width: min(300px, 55vw);
-            width: auto;
-            padding: 10px;
-          "
-        />
-        <img
-          src="assets/images/ucsdecelogo.png"
-          style="
-            max-height: 100%;
-            max-width: min(300px, 55vw);
-            width: auto;
-            padding: 10px;
-            margin-top: 50px;
-          "
-        />
-        <img
-          src="assets/images/infineonlogo.png"
-          style="
-            max-height: 100%;
-            max-width: min(350px, 55vw);
-            width: auto;
-            padding: 10px;
-          "
-        />
-        <img
-          src="assets/images/aslogo.png"
-          style="
-            max-height: 100%;
-            max-width: min(200px, 55vw);
-            width: auto;
-            padding: 10px;
-          "
-        />
-      </div>
-    </div>
+        <!-- ASK QUESTIONS -->
+        <div class="center" id="questions-div" style="padding-bottom: 4em">
+          <h1 style="margin-bottom: 1em">Any More Questions?</h1>
+          <form id="questionsForm">
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              style="
+                width: min(80%, 600px);
+                height: 36px;
+                margin-bottom: 16px;
+                border-radius: 8px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: none;
+              "
+            />
+            <br />
+            <textarea
+              type="text"
+              id="question"
+              rows="10"
+              cols="50"
+              placeholder="Enter Your Question Here..."
+              style="width: min(80%, 600px); padding: 10px; border-radius: 8px"
+            ></textarea>
+          </form>
+          <br />
+    
+          <button onclick="submitForm()" class="projects-button center main-font">
+            Submit Form
+          </button>
+          <p id="error"></p>
+        </div>
+        <script>
+          function clearMessage() {
+            document.getElementById("error").innerHTML = "";
+          }
+    
+          function submitForm() {
+            console.log("pressed");
+            const email = document.getElementById("email").value;
+            const question = document.getElementById("question").value;
+            if (email == "") {
+              document.getElementById("error").innerHTML =
+                "Email Field Cannot Be Empty";
+            } else if (question == "") {
+              document.getElementById("error").innerHTML =
+                "Question Field Cannot Be Empty";
+            } else {
+              let url =
+                "https://docs.google.com/forms/d/e/1FAIpQLScq_QdWo8Y_mPnKSTRerhu11__t2NwnedWEzKvqf5_13xtTgQ/formResponse?usp=pp_url";
+              url +=
+                "&entry.333490010=" +
+                encodeURIComponent(email) +
+                "&entry.1301356340=" +
+                encodeURIComponent(question) +
+                "&submit=Submit";
+    
+              fetch(url);
+              document.getElementById("error").innerHTML =
+                "Your Question Was Successfully Submitted!";
+              document.getElementById("questionsForm").reset();
+              setTimeout(clearMessage, 5000);
+            }
+          }
+        </script>
 
     <!-- SOCIALS -->
-    <div id="socials">
+    <!-- <div id="socials">
       <p
         class="center"
         style="
@@ -429,6 +369,6 @@
           <img class="instagram" src="./assets/social_icons/instagram.svg"
         /></a>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
