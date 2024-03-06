@@ -15,7 +15,7 @@ body {
 	background-size: cover;
 }
 * {
-	font-family: "Cooper Hewitt";
+	font-family: "Futura";
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -101,7 +101,7 @@ h1 {
 	position: relative;
 	
 	color: #ffffff;
-	font-family: "Cooper Hewitt";
+	font-family: "Futura";
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -284,7 +284,7 @@ dropdown-box {
 
 .basic-paragraph, .basic-paragraph a {
 	font-size: 1em;
-	font-family: Cooper Hewitt;
+	font-family: Futura;
 	font-weight: 400;
 	padding-bottom: max(3em, 3vh);
 	max-width: min(700px, 80vw);
@@ -299,7 +299,7 @@ ul {
 }
 
 li {
-	font-family: Cooper Hewitt;
+	font-family: Futura;
 }
 
 table {
@@ -330,7 +330,7 @@ table.benefits-table th {
 
 table.benefits-table td {
 	text-align: left;
-	font-family: Cooper Hewitt;
+	font-family: Futura;
 }
 
 table.directors-table {
@@ -345,7 +345,7 @@ table.directors-table tr {
 
 table.directors-table th {
 	text-align: left;
-	font-family: Cooper Hewitt;
+	font-family: Futura;
 	width: min(320px, 35vw);
 	min-width: 230px;
 }
