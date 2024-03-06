@@ -9,10 +9,10 @@ body {
 	min-height: max(300px,100%);
 	min-width: 300px;
 	background-image: url("assets/images/background.png");
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: auto;
-	background-attachment: fixed;
+	background-size: cover;
 }
 * {
 	font-family: "Lexend Peta";
