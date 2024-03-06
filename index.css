@@ -15,7 +15,7 @@ body {
 	background-size: cover;
 }
 * {
-	font-family: "Futura";
+	font-family: "Lexend Peta";
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -101,7 +101,7 @@ h1 {
 	position: relative;
 	
 	color: #ffffff;
-	font-family: "Futura";
+	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 700;
 	text-align: center;
@@ -285,7 +285,7 @@ dropdown-box {
 
 .basic-paragraph, .basic-paragraph a {
 	font-size: 1em;
-	font-family: Futura;
+	font-family: Poppins;
 	font-weight: 400;
 	padding-bottom: max(3em, 3vh);
 	max-width: min(700px, 80vw);
@@ -300,7 +300,7 @@ ul {
 }
 
 li {
-	font-family: Futura;
+	font-family: Poppins;
 }
 
 table {
@@ -331,7 +331,7 @@ table.benefits-table th {
 
 table.benefits-table td {
 	text-align: left;
-	font-family: Futura;
+	font-family: Poppins;
 }
 
 table.directors-table {
@@ -346,7 +346,7 @@ table.directors-table tr {
 
 table.directors-table th {
 	text-align: left;
-	font-family: Futura;
+	font-family: Poppins;
 	width: min(320px, 35vw);
 	min-width: 230px;
 }
