@@ -22,83 +22,86 @@
     <link rel="stylesheet" href="./assets/modules/heading/heading.css" />
     
 <style>
-  div.wrapper {
-    max-width: 1000px;
-    width: 100%;
-    padding: 0px 100px;
-    box-sizing: border-box;
-  }
-	div.card {
-		display: grid;
-    aspect-ratio: 2/1;
-		grid-template-columns: 1fr 1fr;
-		border-radius: 10px;
-		background-color: rgba(0, 0, 0, 0.5);
-		gap: 30px;
-		padding: 15px;
-    margin: 15px;
-    font-family: "Poppins";
-	}
-  div.card * {
-    text-align: left;
-  }
-
-	div.img-section {
-		grid-column-start: 1;
-		grid-row-start: 1;
-		display: flex;
-		align-items: center;
-    justify-content: center;
-    aspect-ratio: 1/1;
-	}
-
-	div.img-section img {
-		object-fit: contain;
-    width: 100%;
-    height: 100%;
-	}
-
-	div.text-section {
-		grid-column-start: 2;
-		grid-row-start: 1;
-    overflow-y: scroll;
-    text-wrap: wrap;
-	}
-
-  div.text-section::-webkit-scrollbar {
-    background-color: transparent;
-    width: 4px;
-  }
-  /* div.text-section::-webkit-scrollbar-track { */
-  /*   background-color: transparent; */
-  /* } */
-  div.text-section::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 2px;
-  }
-
-	@media screen and (width <= 800px) {
     div.wrapper {
-      max-width: 400px;
-      padding: 20px;
+        max-width: 1000px;
+        width: 100%;
+        padding: 0px 100px;
+        box-sizing: border-box;
     }
 
-		div.card {
-			display: grid;
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr;
-      aspect-ratio: 1/2;
-		}
-		div.img-section {
-			grid-column-start: 1;
-			grid-row-start: 1;
-		}
-		div.text-section {
-			grid-column-start: 1;
-			grid-row-start: 2;
-		}
-  }
+    div.card {
+        display: grid;
+        aspect-ratio: 2/1;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        gap: 30px;
+        padding: 15px;
+        margin: 15px;
+        font-family: "Poppins";
+    }
+    div.card * {
+        text-align: left;
+    }
 
+    div.img-section {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+    }
+
+    div.img-section img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    div.text-section {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        overflow-y: scroll;
+        text-wrap: wrap;
+    }
+
+    div.text-section::-webkit-scrollbar {
+        background-color: transparent;
+        width: 4px;
+    }
+
+    div.text-section::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+    }
+
+    @media screen and (width <= 800px) {
+        div.wrapper {
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        div.card {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            aspect-ratio: 1/2;
+            @supports not (aspect-ratio: 1/2) {
+                max-height: 800px;
+            }
+        }
+
+        div.img-section {
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
+        div.text-section {
+            grid-column-start: 1;
+            grid-row-start: 2;
+        }
+    }
 </style>
 
 
@@ -183,22 +186,17 @@
     </div>
 
     
-<h1 style="
-      margin-bottom:1em;
-      font-size:calc(1em + 3vw);
-      margin-top:4em;
-      ">Submissions</h1>
+<h1 style="margin-bottom: 1em; font-size: calc(1em + 3vw); margin-top: 4em">
+    Submissions
+</h1>
 <template id="card-template">
-  <div class="card">
-    <div class="img-section">
+    <div class="card">
+        <div class="img-section"></div>
+        <div class="text-section"></div>
     </div>
-    <div class="text-section">
-    </div>
-  </div>
 </template>
 <div class="spacer"></div>
-<div id="card-wrapper" class="wrapper">
-</div>
+<div id="card-wrapper" class="wrapper"></div>
 
 
         <!-- ASK QUESTIONS -->
@@ -271,7 +269,7 @@
         </script>
 
     
-  <script src="submission.js" defer></script>
+<script src="submission.js" defer></script>
 
 
     <!-- SOCIALS -->
