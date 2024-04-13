@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="./assets/modules/dropdown/dropdown.css" />
     <link rel="stylesheet" href="./assets/modules/heading/heading.css" />
+    {% block style %}{% endblock style %}
     <script src="./assets/libs/jquery.min.js"></script>
     <script src="index.js"></script>
 
@@ -53,6 +54,7 @@
     <div id="menu-bar" class="background-element">
       <a href="/index"><span>Home</span></a>
       <a href="/sponsors"><span>Sponsor Us</span></a>
+      <a href="/submissions"><span>Submissions</span></a>
     </div>
     <div id="dropdown-menu-bar" class="background-element">
       <div
@@ -77,6 +79,7 @@
           <div style="height: 68px"></div>
           <a href="/index"><p>Home</p></a>
           <a href="/sponsors"><p>Sponsor Us</p></a>
+          <a href="/submissions"><p>Submissions</p></a>
         </div>
       </div>
     </div>
@@ -160,6 +163,8 @@
             }
           }
         </script>
+
+    {% block deferredscripts %}{% endblock deferredscripts %}
 
     <!-- SOCIALS -->
     <!-- <div id="socials">
