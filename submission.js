@@ -21,9 +21,8 @@ function populateCards() {
                 return {
                     date: element.c[0].v,
                     teamName: element.c[1].v,
-                    location: element.c[2].v,
-                    description: element.c[3].v,
-                    imgUrls: element.c[4].v
+                    description: element.c[2].v,
+                    imgUrls: element.c[3].v
                         .split(", ")
                         .map((element) =>
                             element.replace(
@@ -31,7 +30,7 @@ function populateCards() {
                                 "https://drive.google.com/thumbnail?",
                             ),
                         ),
-                    track: element.c[6].v,
+                    track: element.c[5].v,
                 };
             });
             for (let submission of result) {
@@ -50,13 +49,10 @@ function populateCards() {
                 teamNameHeader.textContent = submission.teamName;
                 let trackHeader = document.createElement("h6");
                 trackHeader.textContent = submission.track;
-                let locationHeader = document.createElement("h6");
-                locationHeader.textContent = submission.location;
                 let desc = document.createElement("p");
                 desc.textContent = submission.description;
                 textSection.appendChild(teamNameHeader);
                 textSection.appendChild(trackHeader);
-                textSection.appendChild(locationHeader);
                 textSection.appendChild(desc);
                 imgSection.appendChild(newImg);
                 wrapper.appendChild(clone);
