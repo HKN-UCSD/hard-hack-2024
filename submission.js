@@ -31,6 +31,7 @@ function populateCards() {
                                 "https://drive.google.com/thumbnail?",
                             ),
                         ),
+                    track: element.c[6].v,
                 };
             });
             for (let submission of result) {
@@ -47,6 +48,8 @@ function populateCards() {
 
                 let teamNameHeader = document.createElement("h5");
                 teamNameHeader.textContent = submission.teamName;
+                let trackHeader = document.createElement("h6");
+                trackHeader.textContent = submission.track;
                 let locationHeader = document.createElement("h6");
                 locationHeader.textContent = submission.location;
                 let desc = document.createElement("p");
