@@ -55,6 +55,7 @@ function populateCards() {
                 let desc = document.createElement("p");
                 desc.textContent = submission.description;
                 textSection.appendChild(teamNameHeader);
+                textSection.appendChild(trackHeader);
                 textSection.appendChild(locationHeader);
                 textSection.appendChild(desc);
                 imgSection.appendChild(newImg);
