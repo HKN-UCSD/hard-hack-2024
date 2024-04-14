@@ -13,10 +13,14 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-* {
 	font-family: "Lexend Peta";
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+/* * { */
+/* 	font-family: "Lexend Peta"; */
+/* } */
 
 h1, h2, h3, h4, h5, h6, p, a {
 	color: #ffffff;
@@ -27,6 +31,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 h1 {
 	margin: 0px 5% 0px 5%;
 }
+
 
 .main-font {
 	color: #ffffff;
